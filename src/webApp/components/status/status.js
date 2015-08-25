@@ -55,9 +55,11 @@
     });
 
     module.controller('StatusCtrl', function($scope, $modal, statusChecker) {
-        var stopFn = statusChecker.run(function(updatedStatus) {
+        // fn declaration rather than inline fn to make things work with minifier
+        function statusChangedCb(updatedStatus) {
             $scope.status = updatedStatus;
-        });
+        }
+        var stopFn = statusChecker.run(statusChangedCb);
         $scope.$on('$destroy', function() {
             console.log('StatusCtrl scope destroyed. Stopping status checker');
             stopFn();
