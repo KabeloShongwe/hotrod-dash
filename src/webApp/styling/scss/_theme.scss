@@ -17,28 +17,50 @@ $gray:                   #95a5a6;
 $gray-light:             #b4bcc2;
 $gray-lighter:           #ecf0f1;
 
-$body-bg: rgb(235, 234, 234);
-$navbar-default-bg: #D2D2D2;
+// $body-bg: rgb(235, 234, 234);
+$body-bg: #CBCACA;
+// $navbar-default-bg: #D2D2D2;
+$navbar-default-bg: #444;
 $nav-section-border: $gray-lighter;
-$sidebar-bg-color: darken($body-bg, 10%);
+// $sidebar-bg-color: darken($body-bg, 10%);
+$sidebar-bg-color: $navbar-default-bg;
 
 $navbar-height: 51px;
 $navbar-default-link-color: #444;
 $navbar-default-link-hover-color: darken($navbar-default-link-color, 20%);
+$navbar-default-toggle-icon-bar-bg: $company-brand-color;
 
-.navbar-default .btn-link.btn-status-offline {
-  color: $brand-danger !important;
+.cmp-login {
+  .logo-wrap {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  form {
+    margin-bottom: 12px;
+    .form-group.password {
+      margin-bottom: 25px;
+    }
+  }
 }
 
+.navbar-default {
+  .navbar-brand {
+    color: #fff;
+  }
+  .btn-link.btn-status-offline {
+    color: $brand-danger !important;
+  }
+}
 
 .navbar-fixed-top {
   background-color: #FFF;
-  border-bottom: 1px solid $company-brand-color !important;
-  .glyphicon-time,
-  .glyphicon-stats,
-  .glyphicon-user {
-    color: $company-brand-color;
-  }
+  border-bottom: 3px solid $company-brand-color !important;
+  //.glyphicon-time,
+  //.glyphicon-stats,
+  //.glyphicon-user {
+  //  color: $company-brand-color;
+  //}
   .navbar-brand {
     color: $company-brand-color;
     img.logo {
@@ -61,11 +83,12 @@ $btn-success-bg: $company-brand-color;
 }
 
 .section-title.text-muted {
-  color: $navbar-default-link-color !important;
+  color: #fff !important;
 }
 
-$link-color: $company-brand-color;
+// $link-color: $company-brand-color;
 // $link-color: #1100BB;
+$link-color: #415b76;
 $dropdown-link-color: lighten($gray-base, 20%);
 
 //----------------------------------------------------------
@@ -91,11 +114,11 @@ $pagination-disabled-border:           $pagination-border;
 
 @include hotrod-timepicker($navbar-height, $navbar-default-bg, $text-color, $navbar-default-bg, $nav-section-border, $border-right: none, $border-left: none,
   $border-bottom: solid 3px $navbar-default-bg);
-@include hotrod-data-table($multisort-dir-color: $brand-success);
+@include hotrod-data-table($multisort-dir-color: $company-brand-color, $th-color: $link-color);
 
 // Note: $navbar-height + 1px so top border can be seen
 // #6F7171
-$pill-bg-color: #6F7171;
-// $component-active-bg
-@include cmp-sidebar($sidebar-bg-color, $component-active-color, $pill-bg-color, $company-brand-color, $navbar-height + 1px, $screen-sm, $navbar-default-bg, $nav-section-border);
+// $sidebar-pill-bg-color: #6F7171;
+$sidebar-pill-bg-color: $component-active-bg;
+@include cmp-sidebar($sidebar-bg-color, $component-active-color, $sidebar-pill-bg-color, $company-brand-color, $navbar-height + 1px, $screen-sm, $navbar-default-bg, $nav-section-border);
 @include cmp-home($brand-success, $brand-warning);
