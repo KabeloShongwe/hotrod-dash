@@ -57,18 +57,38 @@
   top: -7px;
   padding: 5px; }
 
-.navbar-fixed-top .navbar-brand img.logo {
-  width: 23px;
-  height: 28px;
-  position: relative;
-  top: -2px;
-  margin-right: 5px; }
+.navbar-default .btn-link.btn-status-offline {
+  color: #E74C3C !important; }
+
+.navbar-fixed-top {
+  background-color: #FFF;
+  border-bottom: 1px solid #E9278E !important; }
+  .navbar-fixed-top .glyphicon-time,
+  .navbar-fixed-top .glyphicon-stats,
+  .navbar-fixed-top .glyphicon-user {
+    color: #E9278E; }
+  .navbar-fixed-top .navbar-brand {
+    color: #E9278E; }
+    .navbar-fixed-top .navbar-brand img.logo {
+      width: 23px;
+      height: 28px;
+      position: relative;
+      top: -2px;
+      margin-right: 5px; }
+
+.panel-table {
+  border: solid 1px #b4bcc2 !important; }
+  .panel-table th a.hotrod-sort {
+    font-weight: normal !important; }
+
+.section-title.text-muted {
+  color: #444 !important; }
 
 .kbn-timepicker-wrap .kbn-timepicker.panel {
   padding-top: 51px;
-  border-left: solid 5px #313232;
-  border-right: solid 5px #313232;
-  border-bottom: solid 9px #313232;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 3px #D2D2D2;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0; }
 
@@ -159,8 +179,8 @@
     margin-bottom: -1px;
     background-color: #ddd;
     border-radius: 0 0 3px 3px;
-    border-left: solid 1px #313232;
-    border-right: solid 1px #313232;
+    border-left: solid 1px #D2D2D2;
+    border-right: solid 1px #D2D2D2;
     cursor: pointer; }
     .kbn-timepicker .closer a {
       display: inline-block;
@@ -183,7 +203,7 @@
   min-height: 140px; }
 
 .navbar .timepicker-links {
-  border-left: solid 1px #111;
+  border-left: solid 1px #ecf0f1;
   padding-left: 15px;
   padding-right: 15px; }
   .navbar .timepicker-links a {
@@ -199,8 +219,8 @@
     padding: 6px 10px; }
 
 .navbar .timepicker-refresh {
-  border-left: solid 1px #111;
-  border-right: solid 1px #111;
+  border-left: solid 1px #ecf0f1;
+  border-right: solid 1px #ecf0f1;
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -339,8 +359,8 @@
     overflow-y: auto; } }
 .cmp-sidebar {
   height: 100%;
-  background-color: #313232;
-  border-top: solid 1px #313232;
+  background-color: #d2d0d0;
+  border-top: solid 1px #D2D2D2;
   padding-left: 0;
   padding-right: 0; }
   .cmp-sidebar .section-title {
@@ -366,24 +386,24 @@
   .cmp-sidebar .nav-pills > li.section-title {
     padding-left: 5px;
     padding-right: 5px;
-    border-bottom: solid 1px #111; }
+    border-bottom: solid 1px #ecf0f1; }
   .cmp-sidebar .nav-pills > li > a {
     color: #fff;
-    background-color: #313232;
+    background-color: #6F7171;
     border-radius: 0;
-    border-top: solid 1px #313232;
-    border-bottom: solid 1px #111;
-    border-left: solid 3px #313232; }
+    border-top: solid 1px #D2D2D2;
+    border-bottom: solid 1px #ecf0f1;
+    border-left: solid 3px #6F7171; }
     .cmp-sidebar .nav-pills > li > a:hover {
-      background-color: #636666;
-      border-top: solid 1px #636666; }
+      background-color: #a2a4a4;
+      border-top: solid 1px #a2a4a4; }
     .cmp-sidebar .nav-pills > li > a .glyphicon {
       margin-right: 5px; }
   .cmp-sidebar .nav-pills > li.active > a {
-    background-color: #4a4c4c;
-    border-left: solid 3px #FFF101; }
+    background-color: #888b8b;
+    border-left: solid 3px #E9278E; }
     .cmp-sidebar .nav-pills > li.active > a:hover {
-      background-color: #636666; }
+      background-color: #a2a4a4; }
 
 .cmp-home .navbar-form .search {
   min-width: 20em; }
@@ -404,7 +424,7 @@ html, body, .full-height {
   min-height: 100%; }
 
 body {
-  background-color: #CBCACA;
+  background-color: #ebeaea;
   margin-bottom: 22px; }
 
 .footer {
@@ -465,7 +485,7 @@ a {
   color: #F39C12; }
 
 .dropdown-settings {
-  border-right: solid 1px #111; }
+  border-right: solid 1px #ecf0f1; }
 
 .content {
   padding-top: 15px; }
@@ -480,7 +500,7 @@ a {
   top: 2px; }
 
 .navbar-fixed-top {
-  border-bottom: 1px solid #313232; }
+  border-bottom: 1px solid #D2D2D2; }
 
 .nav-pills.nav-stacked.site-select > li {
   border: none; }

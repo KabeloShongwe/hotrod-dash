@@ -1,4 +1,4 @@
-APP_NAME: Hotrod Dash
+APP_NAME: T-Systems Dash
 
 # ElasticSearch
 ELASTICSEARCH: localhost:9200
