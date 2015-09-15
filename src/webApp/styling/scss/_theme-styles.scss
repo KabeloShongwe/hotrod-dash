@@ -1,0 +1,67 @@
+@import "theme-variables";
+
+@import "../../bower_components/hotrod-charts/lib/styles";
+@import "../../bower_components/hotrod-timepicker/lib/timepicker";
+@import "../../components/home/home";
+@import "../../components/sidebar/sidebar";
+
+@include hotrod-timepicker($navbar-height, $navbar-default-bg, $text-color, $navbar-default-bg, $nav-section-border, $border-right: none, $border-left: none,  $border-bottom: solid 3px $navbar-default-bg);
+@include hotrod-data-table($multisort-dir-color: $company-brand-color, $th-color: $link-color);
+
+// Note: $navbar-height + 1px so top border can be seen
+@include cmp-sidebar($sidebar-bg-color, $component-active-color, $sidebar-pill-bg-color, $company-brand-color, $navbar-height + 1px, $screen-sm, $navbar-default-bg, $nav-section-border);
+@include cmp-home($brand-success, $brand-warning);
+
+.cmp-login {
+  .logo-wrap {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+  form {
+    margin-bottom: 12px;
+    .form-group.password {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.navbar-default {
+  .navbar-brand {
+    color: #fff;
+  }
+  .btn-link.btn-status-offline {
+    color: $brand-danger !important;
+  }
+}
+
+.navbar-fixed-top {
+  background-color: #FFF;
+  border-bottom: 3px solid $company-brand-color !important;
+  .glyphicon-time,
+  .glyphicon-stats,
+  .glyphicon-user {
+    color: $company-brand-color;
+  }
+  .navbar-brand {
+    color: $company-brand-color;
+    img.logo {
+      width: 23px;
+      height: 28px;
+      position: relative;
+      top: -2px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.panel-table {
+  border: solid 1px $gray-light !important;
+  th a.hotrod-sort {
+    font-weight: normal !important;
+  }
+}
+
+.section-title.text-muted {
+  color: #fff !important;
+}

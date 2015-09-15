@@ -57,40 +57,6 @@
   top: -7px;
   padding: 5px; }
 
-.cmp-login .logo-wrap {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 25px; }
-.cmp-login form {
-  margin-bottom: 12px; }
-  .cmp-login form .form-group.password {
-    margin-bottom: 25px; }
-
-.navbar-default .navbar-brand {
-  color: #fff; }
-.navbar-default .btn-link.btn-status-offline {
-  color: #E74C3C !important; }
-
-.navbar-fixed-top {
-  background-color: #FFF;
-  border-bottom: 3px solid #E9278E !important; }
-  .navbar-fixed-top .navbar-brand {
-    color: #E9278E; }
-    .navbar-fixed-top .navbar-brand img.logo {
-      width: 23px;
-      height: 28px;
-      position: relative;
-      top: -2px;
-      margin-right: 5px; }
-
-.panel-table {
-  border: solid 1px #b4bcc2 !important; }
-  .panel-table th a.hotrod-sort {
-    font-weight: normal !important; }
-
-.section-title.text-muted {
-  color: #fff !important; }
-
 .kbn-timepicker-wrap .kbn-timepicker.panel {
   padding-top: 51px;
   border-left: none;
@@ -414,6 +380,44 @@
 
 .cmp-home .navbar-form .search {
   min-width: 20em; }
+
+.cmp-login .logo-wrap {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 25px; }
+.cmp-login form {
+  margin-bottom: 12px; }
+  .cmp-login form .form-group.password {
+    margin-bottom: 25px; }
+
+.navbar-default .navbar-brand {
+  color: #fff; }
+.navbar-default .btn-link.btn-status-offline {
+  color: #E74C3C !important; }
+
+.navbar-fixed-top {
+  background-color: #FFF;
+  border-bottom: 3px solid #E9278E !important; }
+  .navbar-fixed-top .glyphicon-time,
+  .navbar-fixed-top .glyphicon-stats,
+  .navbar-fixed-top .glyphicon-user {
+    color: #E9278E; }
+  .navbar-fixed-top .navbar-brand {
+    color: #E9278E; }
+    .navbar-fixed-top .navbar-brand img.logo {
+      width: 23px;
+      height: 28px;
+      position: relative;
+      top: -2px;
+      margin-right: 5px; }
+
+.panel-table {
+  border: solid 1px #b4bcc2 !important; }
+  .panel-table th a.hotrod-sort {
+    font-weight: normal !important; }
+
+.section-title.text-muted {
+  color: #fff !important; }
 
 @font-face {
   font-family: "Lato";
