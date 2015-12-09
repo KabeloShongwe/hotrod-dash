@@ -26,6 +26,7 @@ module.exports = {
             for (var nodeName in statsObject.nodes) {
                 if (statsObject.nodes.hasOwnProperty(nodeName)) {
                     var nodeStats = statsObject.nodes[nodeName];
+                    var osSwapUsedPerc = Math.ceil(((nodeStats.os.swap.used_in_bytes) / (nodeStats.os.swap.free_in_bytes)) * 100);
                     wantedStats.push({
                         "@timestamp": new Date(nodeStats.timestamp).toISOString(),
                         "nodeName": nodeName,
@@ -34,7 +35,7 @@ module.exports = {
                         "gcTime": ((nodeStats.jvm.gc.collectors.young.collection_time_in_millis) + (nodeStats.jvm.gc.collectors.old.collection_time_in_millis)),
                         "osCpu": nodeStats.os.cpu.usage,
                         "osMem": nodeStats.os.mem.used_percent,
-                        "osSwapUsedPerc": ((nodeStats.os.swap.used_in_bytes) / (nodeStats.os.swap.free_in_bytes)) * 100,
+                        "osSwapUsedPerc": osSwapUsedPerc,
                         "osLoadAverage_1m": nodeStats.os.load_average[0],
                         "osLoadAverage_5m": nodeStats.os.load_average[1],
                         "osLoadAverage_15m": nodeStats.os.load_average[2],
