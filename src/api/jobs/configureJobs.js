@@ -15,7 +15,7 @@ var cleanupServerStatsIndices = require('hotrod-job-es-index-cleanup')({
     esClient: esClient,
     index: 'serverstats-*',
     skip: parseInt(config.getRequired('SS_INDEX_CLEANUP_SPAN')),
-    action: 'delete',
+    action: config.get('SS_INDEX_CLEANUP_ACTION') || 'delete',
     whatIf: config.get('SS_INDEX_CLEANUP_WHATIF')
 });
 
@@ -24,7 +24,7 @@ var closeLogstashIndices = require('hotrod-job-es-index-cleanup')({
     esClient: esClient,
     index: 'logstash-*',
     skip: parseInt(config.getRequired('LS_INDEX_CLEANUP_SPAN')),
-    action: 'close',
+    action: config.get('LS_INDEX_CLEANUP_ACTION') || 'close',
     whatIf: config.get('LS_INDEX_CLEANUP_WHATIF')
 });
 
