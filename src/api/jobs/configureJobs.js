@@ -31,7 +31,7 @@ var closeLogstashIndices = require('hotrod-job-es-index-cleanup')({
 var serverStatsJob = require('./serverStatsJob')();
 
 module.exports = function() {
-#    jobs.runContinuous(serverStatsJob, serverStatsUpdateIntervalSeconds);
-#    jobs.runContinuous(cleanupServerStatsIndices, serverStatsIndexCleanupIntervalSeconds);
-#    jobs.runContinuous(closeLogstashIndices, logstashIndexCleanupIntervalSeconds);
+//    jobs.runContinuous(serverStatsJob, serverStatsUpdateIntervalSeconds);
+//   jobs.runContinuous(cleanupServerStatsIndices, serverStatsIndexCleanupIntervalSeconds);
+//   jobs.runContinuous(closeLogstashIndices, logstashIndexCleanupIntervalSeconds);
 };
